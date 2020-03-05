@@ -74,7 +74,6 @@ TEST(Test6, TestComplex)
     EXPECT_EQ(18, m3(0,2));
 }
 
-// *** Bugs, need to fix late
 TEST(Test7, TestMultiplication1)
 {
     Matrix<int> m2(2,2);
