@@ -1,6 +1,6 @@
 #include "Matrix.h"
 #include <iostream>
-
+// This is for self-learning purpose, doesn't not include for the submission.
 int main()
 {
     Matrix<int> m1(2,2);
@@ -15,9 +15,7 @@ int main()
     m2.transpose();
     m2.print_all();
 
-
     (m2.transpose()).print_all();
-
 
     auto multiplication2 = m1*2;
     multiplication2.print_all();

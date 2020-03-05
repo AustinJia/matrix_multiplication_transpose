@@ -1,5 +1,7 @@
 
-requirement: running in ubuntu 18.04
+detailed: https://github.com/AustinJia/matrix_multiplication_transpose
+requirement: GTest
+Tested in ubuntu 18.04
 
 Running steps:
 &nbsp;
