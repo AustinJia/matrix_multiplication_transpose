@@ -53,6 +53,14 @@ class Matrix{
             delete[] mat; //delete pointer holding array of pointers;
         }
 
+        T get_r(){
+            return this->r;
+        }
+
+        T get_c(){
+            return this->c;
+        }
+
         void resetMatrix(const int &rr, const int &cc)
         {
             std::swap(this->r,this->c);
@@ -63,7 +71,7 @@ class Matrix{
             }
         }
 
-        int& operator()(const int &x,const int &y)  {
+        T& operator()(const int &x,const int &y)  {
             return mat[x][y];
         }
 
@@ -80,12 +88,20 @@ class Matrix{
             return *this;
         }
 
-        void operator=(const Matrix<T> &rhs)
+        void operator=(Matrix<T> rhs)
         {
-            Matrix tmp(rhs);
-            rhs.swap(*this);
-            return *this;
+            std::swap(this->r,rhs.r);
+            std::swap(this->c,rhs.c);
+            std::swap(this->mat,rhs.mat);
         }
+
+        // void operator=(const Matrix<T>& rhs)
+        // {
+        //     this->r = rhs.r;
+        //     this->c = rhs.c;
+        //     this->mat = rhs.mat;
+        // }
+
 
         Matrix<T> operator*(const Matrix<T> &rhs) const
         {
